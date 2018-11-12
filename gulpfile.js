@@ -44,7 +44,13 @@ gulp.task('libs-css', ['sass'], function(){
 });
 gulp.task('libs-js', function(){
   return gulp.src([
-    'app/libs/slick-carousel/slick/slick.min.js'
+    'app/libs/slick/slick/slick.min.js',
+    'app/libs/scrollmagic/TweenMax.min.js',
+    'app/libs/scrollmagic/ScrollMagic.min.js',
+    'app/libs/scrollmagic/animation.gsap.js',
+    'app/libs/scrollmagic/addIndicators.min.js',
+    'app/libs/smooth-scrollbar/dist/smooth-scrollbar.js',
+    'app/libs/smooth-scrollbar/dist/plugins/overscroll.js'
   ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())
