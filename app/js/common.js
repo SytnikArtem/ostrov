@@ -24,51 +24,41 @@ $(document).ready(function() {
   //   .addIndicators({name: 'name'})
   //   .addTo(controller);
     function parallaxLetters() {
-        let parallaxController = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
+        let parallaxController = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onLeave", duration: "200%"}});
 
         $('.js-animate').each(function() {
-            let trig = $('.first'),
+            let trig = this.parentNode.parentNode,
                 parallax = this.getAttribute('data-parallax'),
                 speed = parallax * 100 + '%';
+            console.log(trig);
 
             new ScrollMagic.Scene({triggerElement: trig})
                 .setTween(this, {y: speed, ease: Linear.easeNone})
                 .addTo(parallaxController);
         })
     }
-    parallaxLetters();
     function parallaxblock() {
         let parallaxController = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
 
         $('.js-animate-block').each(function() {
-            let trig = this.parentNode,
+            let trigg = this.parentNode,
                 parallax = this.getAttribute('data-parallax'),
                 speed = parallax * 100 + '%';
-            console.log(trig);
-            new ScrollMagic.Scene({triggerElement: trig})
+            new ScrollMagic.Scene({triggerElement: trigg})
                 .setTween(this, {y: speed, ease: Linear.easeNone})
                 .addTo(parallaxController);
         })
     }
     parallaxblock();
-    const body = document.body,
-          jsScroll = document.getElementsByClassName('js-scroll')[0],
-          height = jsScroll.getBoundingClientRect().height - 1,
-          speed = 0.05
-
-        var offset = 0
-
-    body.style.height = Math.floor(height) + "px"
-
-    function smoothScroll() {
-        offset += (window.pageYOffset - offset) * speed
-
-        var scroll = "translateY(-" + offset + "px) translateZ(0)"
-        jsScroll.style.transform = scroll
-
-        raf = requestAnimationFrame(smoothScroll)
-    }
-    smoothScroll()
+    parallaxLetters();
+    var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onLeave"}});
+    var scene = new ScrollMagic.Scene({triggerElement: '.first-logo'})
+        .setClassToggle('.first-menu', 'hide')
+        .addTo(controller)
+    var scene2 = new ScrollMagic.Scene({triggerElement: '.first-logo'})
+        .setClassToggle('.menu-btn', 'show')
+        .addTo(controller)
+    Scrollbar.init(document.querySelector('#my-scrollbar'));
 });
 $(window).scroll(function(){
   if ($(this).scrollTop() > 50) {
