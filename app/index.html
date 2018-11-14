@@ -16,6 +16,11 @@
 
 
 <body>
+<div class="preloader">
+    <div class="preloader-container">
+        <p class="preloader-text">silver island</p>
+    </div>
+</div>
     <div class="first-menu menu">
         <ul class="menu-list">
             <li class="menu-item">
@@ -52,20 +57,75 @@
             </li>
         </ul>
     </div>
-
-    <div class="menu-btn">
-        <img src="img/menu.svg" alt="" class="menu-btn-img">
+    <div class="first-logo">
+        <img src="img/logo.svg" alt="" class="first-logo-img">
     </div>
+    <div class="menu-btn">
+        <div class="menu-btn-img">
+            <div class="menu-line menu-line_top"></div>
+            <div class="menu-line menu-line_bottom"></div>
+        </div>
+    </div>
+    <div class="slide-menu">
+        <div class="slide-menu-overlay"></div>
+        <div class="slide-menu-right">
+            <div class="slide-menu-container">
+                <img src="img/logo.svg" alt="" class="slide-menu-logo">
+                <ul class="slide-menu-list">
+                    <li class="slide-menu-item">
+                        <a href="" class="slide-menu-link">Главная</a>
+                    </li>
+                    <li class="slide-menu-item">
+                        <a href="" class="slide-menu-link">О поселке</a>
+                    </li>
+                    <li class="slide-menu-item">
+                        <a href="" class="slide-menu-link">Выбор дома</a>
+                    </li>
+                    <li class="slide-menu-item">
+                        <a href="" class="slide-menu-link">Спорткомплекс</a>
+                    </li>
+                    <li class="slide-menu-item">
+                        <a href="" class="slide-menu-link">Ресторан</a>
+                    </li>
+                    <li class="slide-menu-item">
+                        <a href="" class="slide-menu-link">Галерея</a>
+                    </li>
+                    <li class="slide-menu-item">
+                        <a href="" class="slide-menu-link">Контакты</a>
+                    </li>
+                </ul>
+                <ul class="menu-social">
+                    <li class="menu-social-item">
+                        <a href="" class="menu-social-link menu-social-link_big">Inst</a>
+                    </li>
+                    <li class="menu-social-item">
+                        <a href="" class="menu-social-link menu-social-link_big">vkontakte</a>
+                    </li>
+                    <li class="menu-social-item">
+                        <a href="" class="menu-social-link menu-social-link_big">fbook</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+
 			<div id="my-scrollbar">
 
 				<section class="section first">
+                    <div class="mask">
+                        <div class="c-home-header__video__mask">
+                            <img src="img/mask.svg" alt="" class="mask-img">
+                        </div>
+                    </div>
+					<div class="plus plus_first">+</div>
+					<div class="plus plus_second">+</div>
+					<div class="plus plus_third">+</div>
                     <div class="first-scroll">
                         <img src="img/mouse.svg" alt="" class="first-scroll-img">
                     </div>
 					<div class="first-overlay"></div>
-					<div class="first-logo">
-						<img src="img/logo.svg" alt="" class="first-logo-img">
-					</div>
 					<div class="fluid-container">
 						<div class="first-flex">
 							<h1 class="first-title title">
@@ -87,7 +147,10 @@
 								<span class="js-animate js-animate_title" data-parallax="-0.4">в</span>
 							</h1>
 							<p class="first-subtitle subtitle">Персональный рай на лоне русской природы</p>
-							<button type="button" class="btn first-btn">Посмотреть видео</button>
+							<button type="button" class="btn first-btn js-btn">
+								<span class="btn-static">Посмотреть видео</span>
+								<span class="btn-hover"><span class="btn-text">Посмотреть видео</span></span>
+							</button>
 							<div id="trigger1"></div>
 						</div>
 					</div>
@@ -101,40 +164,93 @@
 						<div class="second-container">
 							<div class="scene">
 								<h2 class="second-title">Жизнь на острове</h2>
-								<div class="second-top">
+								<div class="second-top hide999">
 									<div class="section-overflow">
 										<div class="second-top-overlay js-animate-block" data-parallax="0.2"></div>
 									</div>
-									<div class="second-item second-item_first js-animate-block" data-parallax="-0.1">
+									<div class="second-item second-item_first js-animate-block" data-parallax="-0.15">
 										<h4 class="second-item-title">Концепция</h4>
 										<p class="second-item-subtitle">Почему клуб?</p>
 										<p class="second-item-text">Возможность качественно отдохнуть от работы и, одновременно, легкая доступность от центра города, делают "Серебряный остров" идеальным местом для досуга делового человека и безопасного проживания его семьи.</p>
-										<button class="second-item-btn">узнать больше</button>
+										<button class="second-item-btn js-btn">
+											<span class="btn-static">узнать больше</span>
+											<span class="btn-hover greey"><span class="btn-text white">узнать больше</span></span>
+										</button>
 									</div>
 								</div>
+                                <div class="second-slider show999">
+                                    <div class="second-bottom-item second-slider-item second-bottom-item_first">
+                                        <div class="section-overflow">
+                                            <div class="second-bottom-overlay second-bottom-overlay_first js-animate-block" data-parallax="0.2"></div>
+                                        </div>
+                                        <div class="second-item second-item_second js-animate-block" data-parallax="-0.15">
+                                            <h4 class="second-item-title second-item-title_big">О клубе</h4>
+                                            <p class="second-item-subtitle">Клубный ресторан авторской русской<br> и европейской кухни</p>
+                                            <p class="second-item-text second-item-text_big">Идеальное место для досуга делового человека и безопасного проживания его семьи.</p>
+                                            <button class="second-item-btn js-btn">
+                                                <span class="btn-static">узнать больше</span>
+                                                <span class="btn-hover greey"><span class="btn-text white">узнать больше</span></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="second-bottom-item second-slider-item second-bottom-item_second">
+                                        <div class="section-overflow">
+                                            <div class="second-bottom-overlay second-bottom-overlay_second js-animate-block" data-parallax="0.2"></div>
+                                        </div>
+                                        <div class="second-item second-item_third js-animate-block" data-parallax="-0.15">
+                                            <h4 class="second-item-title">Членство</h4>
+                                            <p class="second-item-subtitle">Желаешь присоединиться?</p>
+                                            <p class="second-item-text second-item-text_big2">Закажи персональное предложение о покупке домовладения</p>
+                                            <button class="second-item-btn js-btn">
+                                                <span class="btn-static">узнать больше</span>
+                                                <span class="btn-hover greey"><span class="btn-text white">узнать больше</span></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="second-bottom-item second-slider-item second-bottom-item_three">
+                                        <div class="section-overflow">
+                                            <div class="second-bottom-overlay second-bottom-overlay_three js-animate-block" data-parallax="0.2"></div>
+                                        </div>
+                                        <div class="second-item second-item_third js-animate-block" data-parallax="-0.15">
+                                            <h4 class="second-item-title">Концепция</h4>
+                                            <p class="second-item-subtitle">Почему клуб?</p>
+                                            <p class="second-item-text">Возможность качественно отдохнуть от работы и, одновременно, легкая доступность от центра города, делают "Серебряный остров" идеальным местом для досуга делового человека и безопасного проживания его семьи.</p>
+                                            <button class="second-item-btn js-btn">
+                                                <span class="btn-static">узнать больше</span>
+                                                <span class="btn-hover greey"><span class="btn-text white">узнать больше</span></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
 							</div>
 
-							<div class="second-bottom scene">
+							<div class="second-bottom scene hide999">
 								<div class="second-bottom-item second-bottom-item_first">
 									<div class="section-overflow">
 										<div class="second-bottom-overlay second-bottom-overlay_first js-animate-block" data-parallax="0.2"></div>
 									</div>
-									<div class="second-item second-item_second js-animate-block" data-parallax="-0.15">
+									<div class="second-item second-item_second js-animate-block" data-parallax="-0.2">
 										<h4 class="second-item-title second-item-title_big">О клубе</h4>
 										<p class="second-item-subtitle">Клубный ресторан авторской русской<br> и европейской кухни</p>
 										<p class="second-item-text second-item-text_big">Идеальное место для досуга делового человека и безопасного проживания его семьи.</p>
-										<button class="second-item-btn">узнать больше</button>
+										<button class="second-item-btn js-btn">
+											<span class="btn-static">узнать больше</span>
+											<span class="btn-hover greey"><span class="btn-text white">узнать больше</span></span>
+										</button>
 									</div>
 								</div>
 								<div class="second-bottom-item second-bottom-item_second">
 									<div class="section-overflow">
 										<div class="second-bottom-overlay second-bottom-overlay_second js-animate-block" data-parallax="0.2"></div>
 									</div>
-									<div class="second-item second-item_third js-animate-block" data-parallax="-0.15">
+									<div class="second-item second-item_third js-animate-block" data-parallax="-0.2">
 										<h4 class="second-item-title second-item-title_big2">Членство</h4>
 										<p class="second-item-subtitle">Желаешь присоединиться?</p>
 										<p class="second-item-text second-item-text_big2">Закажи персональное предложение о покупке домовладения</p>
-										<button class="second-item-btn">узнать больше</button>
+										<button class="second-item-btn js-btn">
+											<span class="btn-static">узнать больше</span>
+											<span class="btn-hover greey"><span class="btn-text white">узнать больше</span></span>
+										</button>
 									</div>
 								</div>
 							</div>
@@ -142,6 +258,10 @@
 					</div>
 				</section>
 				<section class="section third">
+					<div class="third-map">
+						<img src="img/island.svg" alt="" class="third-map-img">
+					</div>
+					<div class="plus plus_fourth">+</div>
 					<div class="fluid-container">
 						<div class="third-container js-animate-block" data-parallax="-0.3">
 							<h2 class="third-title">Локация</h2>
@@ -174,11 +294,16 @@
 					</div>
 				</section>
 				<section class="section fourth">
+					<div class="plus plus_fifth">+</div>
+					<div class="plus plus_sixth">+</div>
 					<div class="fluid-container">
 						<div class="fourth-container">
 							<h2 class="fourth-title">Жизнь для</h2>
 							<div class="fourth-flex">
 								<div class="fourth-item">
+									<div class="slider-progress">
+										<div class="progress"></div>
+									</div>
 									<div class="fourth-slider left-slider">
 										<div class="left-slider-item">
 											<div class="left-slider-overlay left-slider-overlay_first js-animate-block" data-parallax="0.2"></div>
@@ -217,9 +342,12 @@
 					<div class="fluid-container">
 						<div class="fifth-flex" >
                             <div class="js-animate-block fifth-flex-item" data-parallax="-0.2">
-                                <h2 class="fifth-title">Спорт</h2>
-                                <p class="fifth-text">Развитая спортивная ифраструктура<br> для здорового образа жизни</p>
-                                <button class="fifth-btn btn">подробнее</button>
+								<h2 class="fifth-title js-opacity">Спорт</h2>
+								<p class="fifth-text js-opacity">Развитая спортивная ифраструктура<br> для здорового образа жизни</p>
+								<button class="fifth-btn btn js-opacity js-btn">
+										<span class="btn-static">подробнее</span>
+										<span class="btn-hover"><span class="btn-text">подробнее</span></span>
+								</button>
                             </div>
 						</div>
 					</div>
@@ -229,9 +357,12 @@
 					<div class="fluid-container">
 						<div class="fifth-flex">
                             <div class="js-animate-block fifth-flex-item" data-parallax="-0.2">
-                                <h2 class="fifth-title">Ресторан</h2>
-                                <p class="fifth-text">Место для тех, кто ценит<br> натуральную и вкусную еду</p>
-                                <button class="fifth-btn btn">подробнее</button>
+                                <h2 class="fifth-title js-opacity">Ресторан</h2>
+                                <p class="fifth-text js-opacity">Место для тех, кто ценит<br> натуральную и вкусную еду</p>
+								<button class="fifth-btn btn js-opacity js-btn">
+									<span class="btn-static">подробнее</span>
+									<span class="btn-hover"><span class="btn-text">подробнее</span></span>
+								</button>
                             </div>
 						</div>
 					</div>
@@ -241,9 +372,12 @@
 					<div class="fluid-container">
 						<div class="fifth-flex">
                             <div class="js-animate-block fifth-flex-item" data-parallax="-0.2">
-                                <h2 class="fifth-title">Wellness</h2>
-                                <p class="fifth-text">Все для здоровой<br> и долгой жизни</p>
-                                <button class="fifth-btn btn">подробнее</button>
+                                <h2 class="fifth-title js-opacity">Wellness</h2>
+                                <p class="fifth-text js-opacity">Все для здоровой<br> и долгой жизни</p>
+								<button class="fifth-btn btn js-opacity js-btn">
+									<span class="btn-static">подробнее</span>
+									<span class="btn-hover"><span class="btn-text">подробнее</span></span>
+								</button>
                             </div>
 						</div>
 					</div>
@@ -253,9 +387,12 @@
 					<div class="fluid-container">
 						<div class="fifth-flex">
                             <div class="js-animate-block fifth-flex-item" data-parallax="-0.2">
-                                <h2 class="fifth-title">Домовладения</h2>
-                                <p class="fifth-text">Участок с полным набором коммуникаций.<br> Готовые проекты. Дизайн-регламент</p>
-                                <button class="fifth-btn btn">подробнее</button>
+                                <h2 class="fifth-title js-opacity">Домовладения</h2>
+                                <p class="fifth-text js-opacity">Участок с полным набором коммуникаций.<br> Готовые проекты. Дизайн-регламент</p>
+								<button class="fifth-btn btn js-opacity js-btn">
+									<span class="btn-static">подробнее</span>
+									<span class="btn-hover"><span class="btn-text">подробнее</span></span>
+								</button>
                             </div>
 						</div>
 					</div>
@@ -307,7 +444,7 @@
 							<div class="footer-item footer-item_third">
 								<p class="footer-item-title">Связаться с нами:</p>
 								<a href="mailto:info@silverisland.club" class="footer-item-link">info@silverisland.club</a>
-								<a href="tel:+74732222022" class="footer-item-link">+ 7 473 222 20 22</a>
+								<a href="tel:+74732222022" class="footer-item-link">+7 473 222 20 22</a>
 								<a href="tel:+79204376837" class="footer-item-link footer-item-link_nomarg">+7 920 437 68 37</a>
 								<a href="" class="footer-item-link">Политика конфиденциальности</a>
 							</div>
