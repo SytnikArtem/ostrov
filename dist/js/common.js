@@ -1,26 +1,29 @@
 "use strict";
-$(document).ready(function() {
-    var time = 5, // времья перелистывания слайдов главного слайдера
+
+$(document).ready(function () {
+    var time = 5,
+        // времья перелистывания слайдов главного слайдера
         bar,
         $slick,
         tick,
         isPause,
         percentTime,
-    //Слайдер на десктопе
-    $slick = $('.left-slider');
+
+        //Слайдер на десктопе
+        $slick = $('.left-slider');
     $slick.slick({
-      infinite: true,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      speed: 800,
-      asNavFor: '.right-slider'
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        speed: 800,
+        asNavFor: '.right-slider'
     });
     bar = $('.progress');
     $('.left-slider .slick-prev, .left-slider .slick-next').on({
-        mouseenter: function() {
+        mouseenter: function mouseenter() {
             isPause = true;
         },
-        mouseleave: function() {
+        mouseleave: function mouseleave() {
             isPause = false;
         }
     });
@@ -31,13 +34,12 @@ $(document).ready(function() {
         tick = setInterval(interval, 10);
     }
     function interval() {
-        if(isPause === false) {
-            percentTime += 1 / (time+0.1);
+        if (isPause === false) {
+            percentTime += 1 / (time + 0.1);
             bar.css({
-                width: percentTime+"%"
+                width: percentTime + "%"
             });
-            if(percentTime >= 100)
-            {
+            if (percentTime >= 100) {
                 $slick.slick('slickNext');
                 $('.right-slider').slick('slickNext');
                 startProgressbar();
@@ -46,150 +48,125 @@ $(document).ready(function() {
     }
     function resetProgressbar() {
         bar.css({
-            width: 0+'%'
+            width: 0 + '%'
         });
         clearTimeout(tick);
     }
 
-    $('.left-slider .slick-prev, .left-slider .slick-next').click(function() {
+    $('.left-slider .slick-prev, .left-slider .slick-next').click(function () {
         startProgressbar();
     });
     startProgressbar();
 
-  $('.right-slider').slick({
-    infinite: true,
-    arrows: false,
-    speed: 1000,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    asNavFor: '.left-slider'
-  });
-    $('.left-slider .slick-next').click(function() {
+    $('.right-slider').slick({
+        infinite: true,
+        arrows: false,
+        speed: 1000,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        asNavFor: '.left-slider'
+    });
+    $('.left-slider .slick-next').click(function () {
         $('.right-slider').slick('slickNext');
     });
-    $('.left-slider .slick-prev').click(function() {
+    $('.left-slider .slick-prev').click(function () {
         $('.right-slider').slick('slickPrev');
     });
     //Ховер эффект кнопок
-    $('.js-btn').hover(function(){
-        let _this = $(this);
+    $('.js-btn').hover(function () {
+        var _this = $(this);
         $(this).find('.btn-hover').addClass('active');
-        setTimeout(function(){
-            _this.find('.btn-text').addClass('active')
-        },50)
-
-    },function(){
-        $(this).find('.btn-hover').removeClass('active')
-        $(this).find('.btn-text').removeClass('active')
+        setTimeout(function () {
+            _this.find('.btn-text').addClass('active');
+        }, 50);
+    }, function () {
+        $(this).find('.btn-hover').removeClass('active');
+        $(this).find('.btn-text').removeClass('active');
     });
     //Паралакс для букв
     function parallaxLetters() {
-        let parallaxController = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onLeave", duration: "200%"}});
+        var parallaxController = new ScrollMagic.Controller({ globalSceneOptions: { triggerHook: "onLeave", duration: "200%" } });
 
-        $('.js-animate').each(function() {
-            let trig = this.parentNode.parentNode,
+        $('.js-animate').each(function () {
+            var trig = this.parentNode.parentNode,
                 parallax = this.getAttribute('data-parallax'),
                 speed = parallax * 100 + '%';
 
-            new ScrollMagic.Scene({triggerElement: trig})
-                .setTween(this, {y: speed, ease: Linear.easeNone})
-                .addTo(parallaxController);
-        })
+            new ScrollMagic.Scene({ triggerElement: trig }).setTween(this, { y: speed, ease: Linear.easeNone }).addTo(parallaxController);
+        });
     }
     //Паралакс для бекграундов
     function parallaxBlock() {
-        let parallaxController = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
+        var parallaxController = new ScrollMagic.Controller({ globalSceneOptions: { triggerHook: "onEnter", duration: "200%" } });
 
-        $('.js-animate-block').each(function() {
-            let trigg = this.parentNode,
+        $('.js-animate-block').each(function () {
+            var trigg = this.parentNode,
                 parallax = this.getAttribute('data-parallax'),
                 speed = parallax * 100 + '%';
-            new ScrollMagic.Scene({triggerElement: trigg})
-                .setTween(this, {y: speed, ease: Linear.easeNone})
-                .addTo(parallaxController);
-        })
+            new ScrollMagic.Scene({ triggerElement: trigg }).setTween(this, { y: speed, ease: Linear.easeNone }).addTo(parallaxController);
+        });
     }
     function parallaxBlock2() {
-        let parallaxController = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
+        var parallaxController = new ScrollMagic.Controller({ globalSceneOptions: { triggerHook: "onEnter", duration: "200%" } });
 
-        $('.js-animate-block2').each(function() {
-            let trigg = this.parentNode,
+        $('.js-animate-block2').each(function () {
+            var trigg = this.parentNode,
                 parallax = this.getAttribute('data-parallax'),
                 speed = parallax * 100 + '%';
-            new ScrollMagic.Scene({triggerElement: trigg})
-                .setTween(this, {y: speed, ease: Linear.easeNone})
-                .addTo(parallaxController);
-        })
+            new ScrollMagic.Scene({ triggerElement: trigg }).setTween(this, { y: speed, ease: Linear.easeNone }).addTo(parallaxController);
+        });
     }
     //Паралакс для  текстов в блоках
     function parallaxText() {
-        let parallaxController = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter"}});
+        var parallaxController = new ScrollMagic.Controller({ globalSceneOptions: { triggerHook: "onEnter" } });
 
-        $('.js-opacity').each(function() {
-            let triggg = this;
-            new ScrollMagic.Scene({triggerElement: triggg})
-                .setClassToggle(triggg, 'active')
-                .addTo(parallaxController);
-        })
+        $('.js-opacity').each(function () {
+            var triggg = this;
+            new ScrollMagic.Scene({ triggerElement: triggg }).setClassToggle(triggg, 'active').addTo(parallaxController);
+        });
     }
     //Паралакс для появления меню
-    function showMenu(){
+    function showMenu() {
         if ($(window).width() > 999) {
-            let controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", offset: "150"}});
-            var scene = new ScrollMagic.Scene({triggerElement: '.second'})
-                .setClassToggle('.first-menu', 'hide')
-                .addTo(controller)
-            var scene2 = new ScrollMagic.Scene({triggerElement: '.second'})
-                .setClassToggle('.menu-btn', 'show')
-                .addTo(controller)
+            var controller = new ScrollMagic.Controller({ globalSceneOptions: { triggerHook: "onEnter", offset: "150" } });
+            var scene = new ScrollMagic.Scene({ triggerElement: '.second' }).setClassToggle('.first-menu', 'hide').addTo(controller);
+            var scene2 = new ScrollMagic.Scene({ triggerElement: '.second' }).setClassToggle('.menu-btn', 'show').addTo(controller);
         }
     }
     //Паралакс для появления лого
-    function showLogo(){
-        let controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", offset: "50"}});
-        var scene = new ScrollMagic.Scene({triggerElement: '.second'})
-            .setClassToggle('.mask-img', 'active')
-            .addTo(controller)
-        var scene2 = new ScrollMagic.Scene({triggerElement: '.second'})
-            .setClassToggle('.plus', 'show')
-            .addTo(controller)
+    function showLogo() {
+        var controller = new ScrollMagic.Controller({ globalSceneOptions: { triggerHook: "onEnter", offset: "50" } });
+        var scene = new ScrollMagic.Scene({ triggerElement: '.second' }).setClassToggle('.mask-img', 'active').addTo(controller);
+        var scene2 = new ScrollMagic.Scene({ triggerElement: '.second' }).setClassToggle('.plus', 'show').addTo(controller);
     }
     //фиксирование оверлея
-    function fixedBlock(){
-        let controller = new ScrollMagic.Controller();
-        let scene = new ScrollMagic.Scene({
+    function fixedBlock() {
+        var controller = new ScrollMagic.Controller();
+        var scene = new ScrollMagic.Scene({
             triggerElement: ".second",
             // duration: "150",
             // offset: "50",
-            triggerHook: "onEnter",
-        })
-            .setPin(".first")
-            .addTo(controller);
+            triggerHook: "onEnter"
+        }).setPin(".first").addTo(controller);
     }
-    function showBlock(){
-        let controller = new ScrollMagic.Controller();
-        let scene = new ScrollMagic.Scene({
+    function showBlock() {
+        var controller = new ScrollMagic.Controller();
+        var scene = new ScrollMagic.Scene({
             triggerElement: ".js-opacity1",
             // duration: "150",
             // offset: "50",
-            triggerHook: "onEnter",
-        })
-            .setClassToggle('.js-opacity1', 'active')
-            .addTo(controller);
-        let scene2 = new ScrollMagic.Scene({
+            triggerHook: "onEnter"
+        }).setClassToggle('.js-opacity1', 'active').addTo(controller);
+        var scene2 = new ScrollMagic.Scene({
             triggerElement: ".js-opacity2",
             offset: "200",
-            triggerHook: "onEnter",
-        })
-            .setClassToggle('.js-opacity2', 'active')
-            .addTo(controller);
-        let scene3 = new ScrollMagic.Scene({
+            triggerHook: "onEnter"
+        }).setClassToggle('.js-opacity2', 'active').addTo(controller);
+        var scene3 = new ScrollMagic.Scene({
             triggerElement: ".js-opacity3",
             offset: "400",
-            triggerHook: "onEnter",
-        })
-            .setClassToggle('.js-opacity3', 'active')
-            .addTo(controller);
+            triggerHook: "onEnter"
+        }).setClassToggle('.js-opacity3', 'active').addTo(controller);
     }
     showBlock();
     showLogo();
@@ -198,30 +175,28 @@ $(document).ready(function() {
     showMenu();
     parallaxBlock();
     // fixedBlock();
-    if($(window).width() > 768) {
-        parallaxBlock2()
+    if ($(window).width() > 768) {
+        parallaxBlock2();
     }
-
 
     //Плавный скроллбар
     Scrollbar.init(document.querySelector('#my-scrollbar'));
     //Прелоадер
-    setTimeout(function(){
-        $('.preloader').addClass('hide')
+    setTimeout(function () {
+        $('.preloader').addClass('hide');
     }, 1000);
-    setTimeout(function(){
-        $('.preloader-container').addClass('active')
+    setTimeout(function () {
+        $('.preloader-container').addClass('active');
     }, 100);
     //Открытие меню
-    $('.menu-btn').click(function(){
-       $('.slide-menu').toggleClass('active');
-       $(this).toggleClass('active');
+    $('.menu-btn').click(function () {
+        $('.slide-menu').toggleClass('active');
+        $(this).toggleClass('active');
     });
     //Закрытие меню
-    $('.slide-menu-overlay').click(function(e){
-        let elem = $(".slide-menu-right");
-        if(e.target!=elem[0]&&!elem.has(e.target).length)
-        {
+    $('.slide-menu-overlay').click(function (e) {
+        var elem = $(".slide-menu-right");
+        if (e.target != elem[0] && !elem.has(e.target).length) {
             $('.slide-menu').removeClass('active');
             $('.menu-btn').removeClass('active');
         }
