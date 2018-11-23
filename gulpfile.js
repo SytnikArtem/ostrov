@@ -48,8 +48,7 @@ gulp.task('libs-js', function(){
     'app/libs/scrollmagic/TweenMax.min.js',
     'app/libs/scrollmagic/ScrollMagic.min.js',
     'app/libs/scrollmagic/animation.gsap.js',
-    'app/libs/scrollmagic/addIndicators.min.js',
-    'app/libs/smooth-scrollbar/dist/smooth-scrollbar.js'
+    'app/libs/scrollmagic/addIndicators.min.js'
   ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())

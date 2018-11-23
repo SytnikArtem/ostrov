@@ -85,12 +85,12 @@ $(document).ready(function () {
     });
     //Паралакс для букв
     function parallaxLetters() {
-        var parallaxController = new ScrollMagic.Controller({ globalSceneOptions: { triggerHook: "onLeave", duration: "200%" } });
+        var parallaxController = new ScrollMagic.Controller({ globalSceneOptions: { triggerHook: "onLeave", duration: "200%", offset: "10" } });
 
         $('.js-animate').each(function () {
-            var trig = this.parentNode.parentNode,
+            var trig = $('body'),
                 parallax = this.getAttribute('data-parallax'),
-                speed = parallax * 100 + '%';
+                speed = parallax * 40 + '%';
 
             new ScrollMagic.Scene({ triggerElement: trig }).setTween(this, { y: speed, ease: Linear.easeNone }).addTo(parallaxController);
         });
@@ -125,6 +125,14 @@ $(document).ready(function () {
             new ScrollMagic.Scene({ triggerElement: triggg }).setClassToggle(triggg, 'active').addTo(parallaxController);
         });
     }
+    function parallaxText2() {
+        var parallaxController = new ScrollMagic.Controller({ globalSceneOptions: { triggerHook: "onEnter" } });
+
+        $('.js-animate-block3').each(function () {
+            var triggg = this;
+            new ScrollMagic.Scene({ triggerElement: triggg }).setClassToggle(triggg, 'active').addTo(parallaxController);
+        });
+    }
     //Паралакс для появления меню
     function showMenu() {
         if ($(window).width() > 999) {
@@ -135,7 +143,7 @@ $(document).ready(function () {
     }
     //Паралакс для появления лого
     function showLogo() {
-        var controller = new ScrollMagic.Controller({ globalSceneOptions: { triggerHook: "onEnter", offset: "50" } });
+        var controller = new ScrollMagic.Controller({ globalSceneOptions: { triggerHook: "onEnter", offset: "150" } });
         var scene = new ScrollMagic.Scene({ triggerElement: '.second' }).setClassToggle('.mask-img', 'active').addTo(controller);
         var scene2 = new ScrollMagic.Scene({ triggerElement: '.second' }).setClassToggle('.plus', 'show').addTo(controller);
     }
@@ -143,44 +151,48 @@ $(document).ready(function () {
     function fixedBlock() {
         var controller = new ScrollMagic.Controller();
         var scene = new ScrollMagic.Scene({
-            triggerElement: ".second",
-            // duration: "150",
+            triggerElement: ".first",
+            duration: "800",
             // offset: "50",
-            triggerHook: "onEnter"
-        }).setPin(".first").addTo(controller);
+            triggerHook: "onLeave"
+        }).setPin(".first_fixed").addTo(controller);
     }
     function showBlock() {
         var controller = new ScrollMagic.Controller();
         var scene = new ScrollMagic.Scene({
             triggerElement: ".js-opacity1",
             // duration: "150",
-            // offset: "50",
+            offset: "-200",
             triggerHook: "onEnter"
         }).setClassToggle('.js-opacity1', 'active').addTo(controller);
         var scene2 = new ScrollMagic.Scene({
             triggerElement: ".js-opacity2",
-            offset: "200",
+            offset: "-100",
             triggerHook: "onEnter"
         }).setClassToggle('.js-opacity2', 'active').addTo(controller);
         var scene3 = new ScrollMagic.Scene({
             triggerElement: ".js-opacity3",
-            offset: "400",
+            offset: "0",
             triggerHook: "onEnter"
         }).setClassToggle('.js-opacity3', 'active').addTo(controller);
     }
     showBlock();
-    showLogo();
+    // showLogo();
     parallaxLetters();
     parallaxText();
     showMenu();
-    parallaxBlock();
-    // fixedBlock();
+    if( !(/iPad/i.test(navigator.userAgent)))   {
+        fixedBlock();
+        parallaxBlock();
+    }
     if ($(window).width() > 768) {
         parallaxBlock2();
+
+    }
+    if ($(window).width() <= 768) {
+        $('.text-content').find('.js-opacity').removeClass('.js-opacity');
     }
 
-    //Плавный скроллбар
-    Scrollbar.init(document.querySelector('#my-scrollbar'));
     //Прелоадер
     setTimeout(function () {
         $('.preloader').addClass('hide');
@@ -207,4 +219,26 @@ $(document).ready(function () {
         slidesToShow: 1,
         slidesToScroll: 1
     });
+    $( 'html, body' ).animate({
+        scrollTop: 0}, 700);
+    $('.text-top').click(function(e){
+        e.preventDefault();
+        $( 'html, body' ).animate({
+            scrollTop: 0}, 700);
+    });
+    var video = document.querySelector('.overlay-video');
+    video.play();
+    if ($(window).width() <= 768) {
+        $('.text-content').find('.js-opacity').removeClass('js-opacity');
+    }
+});
+$(window).scroll(function () {
+    if( !(/iPad|iPod/i.test(navigator.userAgent)))   {
+        if ($(this).scrollTop() > 150) {
+            $('.mask-img').addClass('active');
+        } else {
+            $('.mask-img').removeClass('active');
+        }
+    }
+
 });

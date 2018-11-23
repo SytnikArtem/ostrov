@@ -26,7 +26,7 @@
 			<img src="img/logo.svg" alt="" class="first-logo-img">
 		</a>
     </div>
-    <div class="menu-btn show">
+    <div class="menu-btn show import">
         <div class="menu-btn-img">
             <div class="menu-line menu-line_top"></div>
             <div class="menu-line menu-line_bottom"></div>
@@ -79,18 +79,22 @@
 
 			<div id="my-scrollbar">
 				<section class="section first">
-					<div class="mask">
-						<div class="c-home-header__video__mask">
-							<img src="img/mask.svg" alt="" class="mask-img">
-						</div>
-					</div>
+					<!--<div class="mask">-->
+						<!--<div class="c-home-header__video__mask">-->
+							<!--<img src="img/mask.svg" alt="" class="mask-img">-->
+						<!--</div>-->
+					<!--</div>-->
 					<div class="plus plus_first">+</div>
 					<div class="plus plus_second">+</div>
 					<div class="plus plus_third">+</div>
-					<div class="first-overlay first-overlay_text"></div>
+					<div class="first-overlay first-overlay_text">
+						<video class="overlay-video" width="100%" height="auto" poster=""  loop="loop" muted preload="auto" autoplay="autoplay">
+							<source src="video.m4v">
+						</video>
+					</div>
 					<div class="fluid-container">
 						<div class="first-flex">
-							<h1 class="first-title title">
+							<div class="first-title title">
 								<span class="js-animate js-animate_title js-animate_big" data-parallax="-3">д</span>
 								<span class="js-animate js-animate_title js-animate_big" data-parallax="-1.2">о</span>
 								<span class="js-animate js-animate_title js-animate_big" data-parallax="1.5">м</span>
@@ -103,7 +107,7 @@
 								<span class="js-animate js-animate_title js-animate_big" data-parallax="1.7">н</span>
 								<span class="js-animate js-animate_title js-animate_big" data-parallax="-0.8">и</span>
 								<span class="js-animate js-animate_title js-animate_big" data-parallax="1.9">е</span>
-							</h1>
+							</div>
 						</div>
 					</div>
 				</section>
@@ -111,21 +115,41 @@
 					<div class="fluid-container">
 						<div class="second-container">
 							<div class="scene">
-								<h2 class="second-title second-title_sm">Текстовая <br>
-									страница</h2>
+								<h1 class="second-title second-title_sm">Текстовая <br>
+									страница</h1>
 								<div class="text-first">
 									<div class="plus plus_seventh">+</div>
 									<div class="plus plus_eight">+</div>
 									<div class="text-container">
 										<div class="text-content">
-											<h4 class="text-title">Уникальная архитектура <span class="nowrap">и индивидуальный</span> дизайн</h4>
-											<p class="text-text">Это первый воронежский загородный клуб, который недавно открылся
-												недлеко от поселка Репное на территории одноименного коттеджного
-												поселка премиум-класса.
-											</p>
-											<p class="text-text text-number text-number_one">Социальная однородность его жителей, сходство интересов, образа <span class="nowrap">и стиля жизни.</span></p>
-											<p class="text-text text-number text-number_two">Определенная идея, формирующая регламент застройки и проживания <span class="nowrap">в поселке,</span> например, единство архитектурного стиля.</p>
-											<p class="text-text text-number text-number_three">Ограниченность доступа только для определенного круга лиц.</p>
+											<div class="js-animate-block3" data-parallax="-2">
+												<div class="text-title js-opacity">
+													<h4>Уникальная архитектура <span class="nowrap">и индивидуальный</span> дизайн</h4>
+												</div>
+											</div>
+											<div class="js-animate-block3" data-parallax="-2">
+												<div class="text-text js-opacity">
+													<p>Это первый воронежский загородный клуб, который недавно открылся
+														недлеко от поселка Репное на территории одноименного коттеджного
+														поселка премиум-класса.
+													</p>
+												</div>
+											</div>
+											<div class="js-animate-block3" data-parallax="-2">
+												<div class="text-text text-number text-number_one js-opacity">
+													<p>Социальная однородность его жителей, сходство интересов, образа <span class="nowrap">и стиля жизни.</span></p>
+												</div>
+											</div>
+											<div class="js-animate-block3" data-parallax="-2">
+												<div class="text-text text-number text-number_two js-opacity">
+													<p>Определенная идея, формирующая регламент застройки и проживания <span class="nowrap">в поселке,</span> например, единство архитектурного стиля.</p>
+												</div>
+											</div>
+											<div class="js-animate-block3" data-parallax="-2">
+												<div class="text-text text-number text-number_three js-opacity">
+													<p>Ограниченность доступа только для определенного круга лиц.</p>
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -135,16 +159,28 @@
 									</div>
 									<div class="text-container">
 										<div class="text-content">
-											<h4 class="text-title text-title_sm">Инфраструктура</h4>
-											<p class="text-text">Это первый воронежский загородный клуб, который недавно открылся
-												недлеко от поселка Репное на территории одноименного коттеджного
-												поселка премиум-класса.
-											</p>
-											<p class="text-text">На территории коттеджного поселка могут быть расположены объекты
-												инфраструктуры: магазины, детские центры, медицинские учреждения,
-												спортивные клубы, салоны красоты, развлекательные заведения,
-												рестораны. Коттеджные поселки располагаются в районах недалеко от
-												крупных городов и дорожных магистралей.</p>
+											<div class="js-animate-block3" data-parallax="-2">
+												<div class="text-title text-title_sm js-opacity">
+													<h4>Инфраструктура</h4>
+												</div>
+											</div>
+											<div class="js-animate-block3" data-parallax="-2">
+												<div class="text-text js-opacity">
+													<p>Это первый воронежский загородный клуб, который недавно открылся
+														недлеко от поселка Репное на территории одноименного коттеджного
+														поселка премиум-класса.
+													</p>
+												</div>
+											</div>
+											<div class="js-animate-block3" data-parallax="-2">
+												<div class="text-text js-opacity">
+													<p>На территории коттеджного поселка могут быть расположены объекты
+														инфраструктуры: магазины, детские центры, медицинские учреждения,
+														спортивные клубы, салоны красоты, развлекательные заведения,
+														рестораны. Коттеджные поселки располагаются в районах недалеко от
+														крупных городов и дорожных магистралей.</p>
+												</div>
+											</div>
 										</div>
 										<div class="second-top second-top_text second-top_text_top">
 											<div class="section-overflow">
@@ -158,19 +194,39 @@
 									<div class="plus plus_10">+</div>
 									<div class="text-container">
 										<div class="text-content">
-											<h4 class="text-title text-title_sm">Особенности местности <br>и расположения</h4>
-											<p class="text-text">На территории коттеджного поселка могут быть расположены объекты
-												инфраструктуры: магазины, детские центры, медицинские учреждения,
-												спортивные клубы, салоны красоты, развлекательные заведения,
-												рестораны. Коттеджные поселки располагаются в районах недалеко от
-												крупных городов и дорожных магистралей.
-											</p>
-											<p class="text-name">“Просто восхитительно”</p>
-											<p class="text-description">— Василий Ветров</p>
-											<p class="text-text">Это первый воронежский загородный клуб, который недавно открылся
-												недлеко от поселка Репное на территории одноименного коттеджного
-												поселка премиум-класса.
-											</p>
+											<div class="js-animate-block3" data-parallax="-0.2">
+												<div class="text-title text-title_sm js-opacity">
+													<h4>Особенности местности <br>и расположения</h4>
+												</div>
+											</div>
+											<div class="js-animate-block3" data-parallax="-0.2">
+												<div class="text-text js-opacity">
+													<p>На территории коттеджного поселка могут быть расположены объекты
+														инфраструктуры: магазины, детские центры, медицинские учреждения,
+														спортивные клубы, салоны красоты, развлекательные заведения,
+														рестораны. Коттеджные поселки располагаются в районах недалеко от
+														крупных городов и дорожных магистралей.
+													</p>
+												</div>
+											</div>
+											<div class="js-animate-block3" data-parallax="-0.2">
+												<div class="text-name js-opacity">
+													<p>“Просто восхитительно”</p>
+												</div>
+											</div>
+											<div class="js-animate-block3" data-parallax="-0.2">
+												<div class="text-description js-opacity">
+													<p>— Василий Ветров</p>
+												</div>
+											</div>
+											<div class="js-animate-block3" data-parallax="-0.2">
+												<div class="text-text js-opacity">
+													<p>Это первый воронежский загородный клуб, который недавно открылся
+														недлеко от поселка Репное на территории одноименного коттеджного
+														поселка премиум-класса.
+													</p>
+												</div>
+											</div>
 											<div class="second-top second-top_text second-top_text_top second-top_text_big">
 												<div class="section-overflow">
 													<div class="second-top-overlay second-top-overlay_text2 js-animate-block" data-parallax="0.2"></div>
@@ -182,43 +238,76 @@
 								<div class="text-fourth">
 									<div class="text-container">
 										<div class="text-content">
-											<h4 class="text-title text-title_sm">История</h4>
-											<p class="text-text">Возникновение в России <a href="" class="text-link">коттеджных поселков</a> современного типа
-												относят к 90-м годам XX века. Первоначально это были так называемые
-												«закрытые» поселки, построенные на средства крупных компаний.
-											</p>
-											<p class="text-text">После 2000 года застройщики начали предлагать дома в коттеджных
-												посёлках и для частных лиц. Одним из самых застраиваемых
-												направлений в Подмосковье стали Рублёвское, а затем Новорижское
-												и Дмитровское шоссе.
-											</p>
-											<p class="text-text">
-												Как вид искусства архитектура входит в сферу духовной и
-												материальной культуры. В отличие от утилитарного строительства
-												и эстетической деятельности (гармонизации окружающей среды),
-												например дизайна, архитектура как искусство решает
-												художественно-образные задачи, т. е. выражает в художественных
-												образах представления человека о пространстве и времени и месте
-												человека в окружающем мире
-											</p>
-											<p class="text-text text-number text-number_fourth">Социальная однородность его жителей, сходство интересов, образа <span class="nowrap">и стиля жизни.</span></p>
-											<p class="text-text text-number text-number_fourth">Определенная идея, формирующая регламент застройки и проживания <span class="nowrap">в поселке,</span> например, единство архитектурного стиля.</p>
-											<p class="text-text text-number text-number_fourth text-number_last">Ограниченность доступа только для определенного круга лиц.</p>
-											<p class="text-text">Однако такая формальная морфология оспаривается учеными.
-												Здания меняются в веках, они перестраиваются, дополняются новыми
-												деталями. Особенно подвержены изменению интерьеры. Они "живут"
-												вместе с людьми и зависят от смены владельцев, их вкусов, моды
-												и изменений функций, символики и престижности сооружений.
-												Кроме того, восприятие архитектуры осуществляется во времени.
-												Оно имеет длительность и композиционную направленность
-												движения зрителя в архитектурном пространстве экстерьера
-												и интерьера. Существенно меняется в веках семантика и символика
-												зданий. Поэтому теоретик архитектуры А. И. Некрасов писал, что
-												архитектура является "вместилищем жизни", поэтому архитектурное
-												пространство "воспринимается специфически", а материалом
-												искусства архитектуры являются "не камень или дерево,
-												а пространство и время"
-											</p>
+											<div class="js-animate-block3" data-parallax="-0.3">
+												<div class="text-title text-title_sm js-opacity">
+													<h4>История</h4>
+												</div>
+											</div>
+											<div class="js-animate-block3" data-parallax="-0.3">
+												<div class="text-text js-opacity">
+													<p>Возникновение в России <a href="" class="text-link">коттеджных поселков</a> современного типа
+														относят к 90-м годам XX века. Первоначально это были так называемые
+														«закрытые» поселки, построенные на средства крупных компаний.
+													</p>
+												</div>
+											</div>
+											<div class="js-animate-block3" data-parallax="-0.3">
+												<div class="text-text js-opacity">
+													<p>После 2000 года застройщики начали предлагать дома в коттеджных
+														посёлках и для частных лиц. Одним из самых застраиваемых
+														направлений в Подмосковье стали Рублёвское, а затем Новорижское
+														и Дмитровское шоссе.
+													</p>
+												</div>
+											</div>
+											<div class="js-animate-block3" data-parallax="-0.3">
+												<div class="text-text js-opacity">
+													<p>
+														Как вид искусства архитектура входит в сферу духовной и
+														материальной культуры. В отличие от утилитарного строительства
+														и эстетической деятельности (гармонизации окружающей среды),
+														например дизайна, архитектура как искусство решает
+														художественно-образные задачи, т. е. выражает в художественных
+														образах представления человека о пространстве и времени и месте
+														человека в окружающем мире
+													</p>
+												</div>
+											</div>
+											<div class="js-animate-block3" data-parallax="-0.3">
+												<div class="text-text text-number text-number_fourth js-opacity">
+													<p>Социальная однородность его жителей, сходство интересов, образа <span class="nowrap">и стиля жизни.</span></p>
+												</div>
+											</div>
+											<div class="js-animate-block3" data-parallax="-0.3">
+												<div class="text-text text-number text-number_fourth js-opacity">
+													<p>Определенная идея, формирующая регламент застройки и проживания <span class="nowrap">в поселке,</span> например, единство архитектурного стиля.</p>
+
+												</div>
+											</div>
+											<div class="js-animate-block3" data-parallax="-0.3">
+												<div class="text-text text-number text-number_fourth text-number_last js-opacity">
+													<p>Ограниченность доступа только для определенного круга лиц.</p>
+												</div>
+											</div>
+											<div class="js-animate-block3" data-parallax="-0.3">
+												<div class="text-text js-opacity">
+													<p>Однако такая формальная морфология оспаривается учеными.
+														Здания меняются в веках, они перестраиваются, дополняются новыми
+														деталями. Особенно подвержены изменению интерьеры. Они "живут"
+														вместе с людьми и зависят от смены владельцев, их вкусов, моды
+														и изменений функций, символики и престижности сооружений.
+														Кроме того, восприятие архитектуры осуществляется во времени.
+														Оно имеет длительность и композиционную направленность
+														движения зрителя в архитектурном пространстве экстерьера
+														и интерьера. Существенно меняется в веках семантика и символика
+														зданий. Поэтому теоретик архитектуры А. И. Некрасов писал, что
+														архитектура является "вместилищем жизни", поэтому архитектурное
+														пространство "воспринимается специфически", а материалом
+														искусства архитектуры являются "не камень или дерево,
+														а пространство и время"
+													</p>
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -228,22 +317,38 @@
 									<div class="plus plus_13">+</div>
 									<div class="text-container">
 										<div class="text-content">
-											<h4 class="text-title text-title_sm">Архитектура</h4>
-											<p class="text-text">На территории коттеджного поселка могут быть расположены объекты
-												инфраструктуры: магазины, детские центры, медицинские учреждения,
-												спортивные клубы, салоны красоты, развлекательные заведения,
-												рестораны. Коттеджные поселки располагаются в <a href="" class="text-link">районах</a> недалеко от
-												крупных городов и дорожных магистралей.
-											</p>
-											<p class="text-subtitle">Как вид искусства</p>
-											<p class="text-text">Таким образом, архитектура как художественно-образное
-												"мышление в камне" (определение Г. К. Вагнера) относится к
-												пространственно-временным видам искусства. Кроме того, оно
-												характерно и собственной, специфической изобразительностью.
-												Интеграционные трансморфологические процессы в искусстве
-												XX-XXI веков приводят к сближению жанров, форм и методов
-												архитектурного, изобразительного и дизайнерского творчества
-											</p>
+											<div class="js-animate-block3" data-parallax="-0.3">
+												<div class="text-title text-title_sm js-opacity">
+													<h4>Архитектура</h4>
+												</div>
+											</div>
+											<div class="js-animate-block3" data-parallax="-0.3">
+												<div class="text-text js-opacity">
+													<p>На территории коттеджного поселка могут быть расположены объекты
+														инфраструктуры: магазины, детские центры, медицинские учреждения,
+														спортивные клубы, салоны красоты, развлекательные заведения,
+														рестораны. Коттеджные поселки располагаются в <a href="" class="text-link">районах</a> недалеко от
+														крупных городов и дорожных магистралей.
+													</p>
+												</div>
+											</div>
+											<div class="js-animate-block3" data-parallax="-0.3">
+												<div class="text-subtitle js-opacity">
+													<p>Как вид искусства</p>
+												</div>
+											</div>
+											<div class="js-animate-block3" data-parallax="-0.3">
+												<div class="text-text js-opacity">
+													<p>Таким образом, архитектура как художественно-образное
+														"мышление в камне" (определение Г. К. Вагнера) относится к
+														пространственно-временным видам искусства. Кроме того, оно
+														характерно и собственной, специфической изобразительностью.
+														Интеграционные трансморфологические процессы в искусстве
+														XX-XXI веков приводят к сближению жанров, форм и методов
+														архитектурного, изобразительного и дизайнерского творчества
+													</p>
+												</div>
+											</div>
 											<a href="" class="text-top">Наверх</a>
 										</div>
 									</div>
@@ -253,26 +358,43 @@
 										<div class="text-content">
 											<div class="text-flex">
 												<div class="text-flex-item">
-													<h4 class="text-title text-title_sm">Добро пожаловать
-														в лучший загородный
-														ресторан Воронежа</h4>
-													<p class="text-text">Это первый воронежский загородный
-														клуб, который недавно открылся
-														недлеко от поселка Репное
-														на территории одноименного
-														коттеджного поселка премиум-класса.
-													</p>
+													<div class="js-animate-block3" data-parallax="-0.3">
+														<div class="text-title text-title_sm js-opacity">
+															<h4>Добро пожаловать
+																в лучший загородный
+																ресторан Воронежа</h4>
+														</div>
+													</div>
+													<div class="js-animate-block3" data-parallax="-0.3">
+														<div class="text-text js-opacity">
+															<p class="text-text">Это первый воронежский загородный
+																клуб, который недавно открылся
+																недлеко от поселка Репное
+																на территории одноименного
+																коттеджного поселка премиум-класса.
+															</p>
+														</div>
+													</div>
 												</div>
 											</div>
 											<div class="text-flex text-flex_end">
 												<div class="text-flex-item text-flex-item_sm">
-													<p class="text-subtitle text-subtitle_sm">Попробовать высокую кухню!</p>
-													<p class="text-text text-text_sm">Это первый воронежский загородный
-														клуб, который недавно открылся
-														недлеко от поселка Репное
-														на территории одноименного
-														коттеджного поселка премиум-класса.
-													</p>
+													<div class="js-animate-block3" data-parallax="-0.3">
+														<div class="text-subtitle text-subtitle_sm js-opacity">
+															<p>Попробовать высокую кухню!</p>
+														</div>
+													</div>
+													<div class="js-animate-block3" data-parallax="-0.3">
+														<div class="text-text text-text_sm js-opacity">
+															<p>Это первый воронежский загородный
+																клуб, который недавно открылся
+																недлеко от поселка Репное
+																на территории одноименного
+																коттеджного поселка премиум-класса.
+															</p>
+														</div>
+													</div>
+
 												</div>
 
 											</div>
@@ -288,7 +410,9 @@
 					<div class="fluid-container">
 						<div class="second-container">
 							<div class="scene">
-								<h2 class="second-title second-title_text">Ресторан<br> «OSTROV»</h2>
+								<div class="js-animate-block second-title second-title_text" data-parallax="-0.3">
+									<h2>Ресторан<br> «OSTROV»</h2>
+								</div>
 								<div class="second-top second-top_reverse">
 									<div class="section-overflow">
 										<div class="second-top-overlay js-animate-block second-top-overlay_text3" data-parallax="0.2"></div>
@@ -303,10 +427,10 @@
 											от поселка Репное на территории
 											одноименного коттеджного поселка
 											премиум-класса.</p>
-										<button class="second-item-btn js-btn">
+										<a href="" class="second-item-btn js-btn">
 											<span class="btn-static">Посмотреть меню</span>
 											<span class="btn-hover greey"><span class="btn-text white">Посмотреть меню</span></span>
-										</button>
+										</a>
 									</div>
 								</div>
 							</div>
@@ -319,7 +443,9 @@
 					</div>
 					<div class="fluid-container">
 						<div class="third-container">
-							<h2 class="third-title third-title_text">Ваш личный помощник</h2>
+							<div class="js-animate-block" data-parallax="-0.3">
+								<h2 class="third-title third-title_text">Ваш личный помощник</h2>
+							</div>
 							<div class="third-flex js-animate-block2" data-parallax="-0.5">
 								<div class="third-item js-opacity1">
 									<div class="third-item-block third-item-block_sm">
@@ -328,10 +454,10 @@
 									<h4 class="third-item-title third-item-title_big">Вечеринки</h4>
 
 									<p class="third-item-desc third-item-desc_big">Клубные<br> мероприятия</p>
-									<button class="second-item-btn js-btn">
+									<a href="" class="second-item-btn js-btn">
 										<span class="btn-static">приглашение</span>
 										<span class="btn-hover greey"><span class="btn-text white">приглашение</span></span>
-									</button>
+									</a>
 								</div>
 								<div class="third-item js-opacity2">
 									<div class="third-item-block third-item-block_sm">
@@ -339,10 +465,10 @@
 									</div>
 									<h4 class="third-item-title third-item-title_big">Бронь</h4>
 									<p class="third-item-desc third-item-desc_big">Бронирование<br> столиков</p>
-									<button class="second-item-btn js-btn">
+									<a href="" class="second-item-btn js-btn">
 										<span class="btn-static">Забронировать</span>
 										<span class="btn-hover greey"><span class="btn-text white">Забронировать</span></span>
-									</button>
+									</a>
 								</div>
 								<div class="third-item js-opacity3">
 									<div class="third-item-block third-item-block_sm">
@@ -350,10 +476,10 @@
 									</div>
 									<h4 class="third-item-title third-item-title_big">Кейтеринг</h4>
 									<p class="third-item-desc third-item-desc_big">Организация<br> торжеств</p>
-									<button class="second-item-btn js-btn">
+									<a href="" class="second-item-btn js-btn">
 										<span class="btn-static">Организовать</span>
 										<span class="btn-hover greey"><span class="btn-text white">Организовать</span></span>
-									</button>
+									</a>
 								</div>
 							</div>
 						</div>
@@ -366,10 +492,10 @@
                             <div class="js-animate-block fifth-flex-item" data-parallax="-0.2">
 								<h2 class="fifth-title js-opacity">Спорт</h2>
 								<p class="fifth-text js-opacity">Развитая спортивная ифраструктура<br> для здорового образа жизни</p>
-								<button class="fifth-btn btn js-opacity js-btn">
+								<a href="" class="fifth-btn btn js-opacity js-btn">
 										<span class="btn-static">подробнее</span>
 										<span class="btn-hover"><span class="btn-text">подробнее</span></span>
-								</button>
+								</a>
                             </div>
 						</div>
 					</div>
@@ -381,10 +507,10 @@
 							<div class="js-animate-block fifth-flex-item" data-parallax="-0.2">
 								<h2 class="fifth-title js-opacity">Информация</h2>
 								<p class="fifth-text js-opacity">О не повторимом<br> загородном клубе</p>
-								<button class="fifth-btn btn js-opacity js-btn">
+								<a href="" class="fifth-btn btn js-opacity js-btn">
 									<span class="btn-static">подробнее</span>
 									<span class="btn-hover"><span class="btn-text">подробнее</span></span>
-								</button>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -396,10 +522,10 @@
 							<div class="js-animate-block fifth-flex-item" data-parallax="-0.2">
 								<h2 class="fifth-title js-opacity">Wellness</h2>
 								<p class="fifth-text js-opacity">Все для того чтобы<br> быть и оставаться здоровым</p>
-								<button class="fifth-btn btn js-opacity js-btn">
+								<a href="" class="fifth-btn btn js-opacity js-btn">
 									<span class="btn-static">подробнее</span>
 									<span class="btn-hover"><span class="btn-text">подробнее</span></span>
-								</button>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -411,10 +537,10 @@
                             <div class="js-animate-block fifth-flex-item" data-parallax="-0.2">
                                 <h2 class="fifth-title js-opacity">Ресторан</h2>
                                 <p class="fifth-text js-opacity">Пожалуй лучший<br> загородный рерсторан</p>
-								<button class="fifth-btn btn js-opacity js-btn">
+								<a href="" class="fifth-btn btn js-opacity js-btn">
 									<span class="btn-static">подробнее</span>
 									<span class="btn-hover"><span class="btn-text">подробнее</span></span>
-								</button>
+								</a>
                             </div>
 						</div>
 					</div>
@@ -494,7 +620,7 @@
 								</ul>
 							</div>
 						</div>
-						<p class="footer-bottom">Создание сайта — <span class="footer-bottom_bold">VIALENT</span></p>
+						<p class="footer-bottom">Создание сайта — <a href="" class="footer-bottom_bold">VIALENT</a></p>
 					</div>
 				</footer>
 			</div>
@@ -503,6 +629,8 @@
 
 	<script src="js/jquery.min.js"></script>
 	<script src="js/libs.min.js"></script>
+	<script src="js/scroll.js"></script>
+	<script>SmoothScroll({ keyboardSupport: false })</script>
 	<script src="js/common.js"></script>
 
 </body>
